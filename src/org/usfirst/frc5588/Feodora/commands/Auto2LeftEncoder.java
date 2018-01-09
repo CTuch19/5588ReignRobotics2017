@@ -8,9 +8,9 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 public class Auto2LeftEncoder extends CommandGroup {
 
     public Auto2LeftEncoder() {
-    	 addSequential(new DriveForRotations(0.25, 80.5));
-         addSequential(new DriveForTurning(0.25, 0.25, 14.85, "left")); //TURNS RIGHT
-         addSequential(new DriveForRotations(0.15, 29.0)); 
+    	 addSequential(new DriveForRotations(0.25, 80.5)); //started at 80.5
+         addSequential(new DriveForTurning(0.25, 0.25, 13.85, "left")); //TURNS RIGHT 14.85 at the begin of girls gen
+         addSequential(new DriveForRotations(0.15, 30.0)); // started at 29.0
          
         // Add Commands here:
         // e.g. addSequential(new Command1());

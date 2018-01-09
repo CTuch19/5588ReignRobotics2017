@@ -3,6 +3,7 @@ package org.usfirst.frc5588.Feodora;
 
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.SpeedController;
+import edu.wpi.first.wpilibj.AnalogGyro;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj.Talon;
@@ -18,6 +19,8 @@ public class RobotMap {
     public static SpeedController climberMotor;
     public static Encoder leftEncoder;
     public static Encoder rightEncoder;
+    //gracie gyroscope code
+    //public static AnalogGyro gyroscope;
     public static final int CAMERA_FORWARDS = 1;
 
 

@@ -8,6 +8,10 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 public class AutoLeftGearVisionAlign extends CommandGroup {
 
     public AutoLeftGearVisionAlign() {
+    	//addSequential(new DriveForRotations(0.25, 80.5));
+        //addSequential(new DriveForTurning(0.25, 0.25, 13, "left")); //TURNS RIGHT 14.85
+        //addSequential(new VisionCommand());
+        //addSequential(new DriveForRotations(0.15, 29.0));
         // Add Commands here:
         // e.g. addSequential(new Command1());
         //      addSequential(new Command2());

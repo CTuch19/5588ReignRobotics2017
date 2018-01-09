@@ -20,7 +20,7 @@ public class DriveForRotations extends Command {
         this.rightSpeed = -1 * oneSpeed;
         this.distance = distance;
      // distance per pulse = PI * wheel diameter in inches / pulse per revolution * fudge factor;
-        final double distancePerPulse = (Math.PI * 5.85)/ 265 * 1; 
+        final double distancePerPulse = (Math.PI * 5.85)/ 265 * 1;  //converts pulses to inches
     	RobotMap.rightEncoder.setDistancePerPulse(distancePerPulse);
     	RobotMap.leftEncoder.setDistancePerPulse(distancePerPulse);
     }
@@ -55,9 +55,9 @@ public class DriveForRotations extends Command {
     	Drive.getInstance().setSpeed(this.leftSpeed + correctingLeft, this.rightSpeed + correctingRight); 
     	
     	//Use this to TEST if your encoder correcting is working properly
-    	System.out.println("The right encoder is at " + rightDistanceTraveled);
-    	System.out.println("The left encoder is at " + leftDistanceTraveled);
-    	System.out.println("The encoder counts is " + RobotMap.rightEncoder.get());
+    	//System.out.println("The right encoder is at " + rightDistanceTraveled);
+    	//System.out.println("The left encoder is at " + leftDistanceTraveled);
+    	//System.out.println("The encoder counts is " + RobotMap.rightEncoder.get());
     }
 
     // Make this return true when this Command no longer needs to run execute()

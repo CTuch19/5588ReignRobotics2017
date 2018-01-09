@@ -37,7 +37,7 @@ public class Robot extends IterativeRobot {
     int session;
     Image frame;
     CameraServer server;
-    UsbCamera targetcam;
+    static UsbCamera targetcam;
     UsbCamera targetcam2;
     int imaqError;
 
@@ -62,6 +62,7 @@ public class Robot extends IterativeRobot {
         autoChooser.addDefault("Auto2 LeftEncod default", new Auto2LeftEncoder());
         autoChooser.addObject("Auto 4 or 5, drive past baseline", new Auto45DriveBaseline());
         autoChooser.addObject("Auto2 Left Gear", new Auto2LeftGear());
+        //autoChooser.addObject("Auto2 Vision left", new AutoLeftGearVisionAlign());
         //autoChooser.addObject("Auto 1 EXTREME", new Auto1EXTREME());
         autoChooser.addObject("Auto3 Right Gear", new Auto3RightGear());
         //autoChooser.addObject("Auto2 LeftGear EXTREME", new Auto2LeftGearEXTREME());
@@ -80,8 +81,14 @@ public class Robot extends IterativeRobot {
         
         targetcam2 = server.startAutomaticCapture(1);
         targetcam2.setBrightness(1);
+        
+        
     }
 
+    public static UsbCamera getCam()
+    {
+    	return targetcam;
+    }
     /**
      * This function is called when the disabled button is hit.
      * You can use it to reset subsystems before shutting down.
@@ -133,4 +140,6 @@ public class Robot extends IterativeRobot {
     public void testPeriodic() {
     	LiveWindow.run();
     }
+
+	
 }

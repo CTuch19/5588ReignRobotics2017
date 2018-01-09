@@ -33,8 +33,8 @@ public class DriveCommand extends Command {
     	double lSpeed = (fSpeed + sSpeed);
     	double rSpeed = (fSpeed - sSpeed);
     	Robot.drive.setSpeed(lSpeed, rSpeed);
-    	System.out.println("The left speed is " + lSpeed);
-    	System.out.println("The right speed is " + rSpeed);
+    	//System.out.println("The left speed is " + lSpeed);
+    	//System.out.println("The right speed is " + rSpeed);
     }
     //if the joystick is close enough to 0, the deadzone will make the robot stop moving
     private double deadzone(double in){
